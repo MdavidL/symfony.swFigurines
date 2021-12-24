@@ -179,7 +179,7 @@ header {
 }
 .figure {
     text-align: center;
-    padding-bottom: 5rem;
+
 }
 .figure .card-container {
     display: flex;
@@ -297,7 +297,7 @@ footer {
     .figures {
         max-width: 24%;
         height: auto;
-        padding-bottom: 9rem;
+        padding-bottom: 7rem;
     }
     .element-figures p {
         font-size: 1rem;
@@ -312,18 +312,41 @@ footer {
     header {
         height: 70vh;
     }
+    .icon-logo {
+        max-width: 15%;
+        height: auto;
+    }
+    .icon-wishlist {
+        max-width: 10%;
+        height: auto;
+        padding-right: 5.5rem;
+
+    }
+    .icon-droid {
+        max-width: 10%;
+        height: auto;
+        padding-right: 1.5rem;
+    }
+    .navbar-route {
+        padding-right: 2rem;
+        color: rgba(57, 60, 65, 1);
+        text-shadow: -0.35px -0.35px 0 transparent, 0.35px 0.35px transparent;
+    }
+    .navbar-route:hover {
+        text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
+    }
     .search-bar {
         padding-top: 6rem;
     }
+    .search-bar input {
+        min-width: 30%;
+        height: 1vh;
+    }
+    .btn {
+        padding: 0.3rem 1rem;
+    }
     .sub-menu {
     padding-left: 5rem;
-    }
-    .sub-menu-list li {
-        font-size: 0.8rem;
-    }
-    .element-list {
-        color: rgba(57, 60, 65, 1);
-        padding: 0 0.6rem 0 0.6rem;
     }
     .grogu {
         position: absolute;
@@ -333,7 +356,112 @@ footer {
         z-index: 0;
     }
     .figures {
-     display: none;
+        display: none;
+    }
+    #figures-group {
+        height: 85vh;
+    }
+    #newsletter-part {
+        height: 85vh;
+    }
+    .newsletter-bar input {
+        min-width: 90%;
+        height: 1vh;
+    }
+}
+@media screen and (max-width: 576px) {
+    *,body {
+        font-size: 0.8rem;
+    }
+    h1 {
+        font-size: 1rem;
+        padding-top: 1rem;
+        max-width: 75%;
+    }
+    header {
+        height: 60vh;
+    }
+    .icon-logo {
+        max-width: 25%;
+        height: auto;
+    }
+    .icon-wishlist {
+        display: none;
+    }
+    .icon-droid {
+        display: none;
+    }
+    .navbar-route {
+        display: none;
+    }
+    .search-bar {
+        padding-top: 4rem;
+    }
+    .search-bar input {
+        min-width: 0%;
+        height: 0.5vh;
+    }
+    .btn {
+        padding: 0.3rem 0.8rem;
+    }
+    .grogu {
+        display: none;
+    }
+    .sub-menu-list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .element-list {
+        font-size: 0.8rem;
+    }
+    #figures-group {
+        height: 230vh;
+    }
+    .figures-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .figure article {
+        width: 60%;
+    }
+    .figure article img {
+        min-width: 80%;
+    }
+    .figure .card .card-content {
+        padding: 1rem 1rem 2rem;
+    }
+    #newsletter-part {
+        height: 70vh;
+    }
+    .newsletter-bgd {
+        max-width: 100%;
+        height: 30vh;
+    }
+    .element-newsletter h3{
+    font-size: 1rem;
+    }
+    .newsletter-bar input {
+        min-width: 60%;
+        height: 0.5vh;
+        margin-right: 0.5rem;
+    }
+    footer {
+        height: 7vh;
+    }
+    .footer-legal-notices {
+        text-align: center;
+        padding: 0 0 1rem 3rem;
+    }
+    .logo-footer {
+        width: 23%;
+        height: auto;
+    }
+    .footer-informations {
+        font-size: 0.7rem;
+        padding: 0 0.5rem 0 0.5rem;
     }
 }
 
