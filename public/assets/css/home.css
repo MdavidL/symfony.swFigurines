@@ -31,7 +31,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
 }
 .icon-logo {
     position: absolute;
@@ -64,6 +63,7 @@ header {
 .navbar-route:hover {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
 }
+/*MAIN*/
 #main-part {
     height: 92vh;
 }
@@ -138,7 +138,6 @@ header {
     width: 100%;
     left: 0;
 }
-/*MAIN*/
 .grogu {
     position: absolute;
     max-width: 20%;
@@ -181,7 +180,6 @@ header {
 }
 .figure {
     text-align: center;
-
 }
 .figure .card-container {
     display: flex;
@@ -276,7 +274,6 @@ footer {
 #btn-top:hover {
     background-color: rgba(237, 237, 237, 1);
 }
-
 @media screen and (max-width: 1024px) {
     h1 {
         font-size: 1rem;
@@ -316,7 +313,6 @@ footer {
         max-width: 10%;
         height: auto;
         padding-right: 5.5rem;
-
     }
     .icon-droid {
         max-width: 10%;

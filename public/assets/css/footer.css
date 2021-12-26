@@ -1,0 +1,7 @@
+@media screen and (max-width: 576px) {
+    footer div {
+        display: none;
+    }
+
+}
+

@@ -14,7 +14,7 @@ class PublicMenuController extends AbstractController
     public function home()
     {
 
-        return $this->render('public/base.html.twig');
+        return $this->render('public/home.html.twig');
 
     }
 
