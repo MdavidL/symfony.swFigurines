@@ -22,10 +22,9 @@ h3 {
 }
 /*HEADER*/
 header {
-    height: 100vh;
+    height: 8vh;
 }
 .main-navbar {
-
     font-size: 0.8rem;
     font-weight: bold;
     padding: 1rem 3rem 0 0;
@@ -64,6 +63,9 @@ header {
 }
 .navbar-route:hover {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
+}
+#main-part {
+    height: 92vh;
 }
 .search-bar {
     position: relative;
@@ -279,13 +281,10 @@ footer {
     h1 {
         font-size: 1rem;
         padding-top: 2rem;
-        max-width: 50%;
+        max-width: 60%;
     }
-    header {
-        height: 85vh;
-    }
-    .sub-menu-list {
-        padding: 1rem 5rem 0 0;
+    #main-part {
+        height: 73vh;
     }
     .sub-menu-list li {
         font-size: 0.8rem;
@@ -306,11 +305,8 @@ footer {
 }
 @media screen and (max-width: 992px) {
     h1 {
-        font-size: 0.8rem;
-        padding-right: 5rem;
-    }
-    header {
-        height: 70vh;
+        font-size: 1rem;
+        padding-right: 8rem;
     }
     .icon-logo {
         max-width: 15%;
@@ -326,6 +322,9 @@ footer {
         max-width: 10%;
         height: auto;
         padding-right: 1.5rem;
+    }
+    #main-part {
+        height: 60vh;
     }
     .navbar-route {
         padding-right: 2rem;
@@ -346,7 +345,7 @@ footer {
         padding: 0.3rem 1rem;
     }
     .sub-menu {
-    padding-left: 5rem;
+        padding-left: 8rem;
     }
     .grogu {
         position: absolute;
@@ -374,12 +373,7 @@ footer {
         font-size: 0.8rem;
     }
     h1 {
-        font-size: 1rem;
-        padding-top: 1rem;
-        max-width: 75%;
-    }
-    header {
-        height: 60vh;
+        padding-right: 0;
     }
     .icon-logo {
         max-width: 25%;
@@ -395,10 +389,9 @@ footer {
         display: none;
     }
     .search-bar {
-        padding-top: 4rem;
+        padding: 2rem 1rem;
     }
     .search-bar input {
-        min-width: 0%;
         height: 0.5vh;
     }
     .btn {
@@ -407,13 +400,15 @@ footer {
     .grogu {
         display: none;
     }
+    .sub-menu {
+        max-width: 80%;
+        padding-left: 2rem;
+    }
     .sub-menu-list {
+        padding: 0;
         display: flex;
         flex-direction: column;
         text-align: center;
-    }
-    .element-list {
-        font-size: 0.8rem;
     }
     #figures-group {
         height: 230vh;

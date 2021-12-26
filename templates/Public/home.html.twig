@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Site</title>
-        <link rel="stylesheet" href="../public/assets/css/home.css" />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site</title>
+    <link rel="stylesheet" href="../public/assets/css/home.css" />
+</head>
 <body>
 
 <header>
@@ -23,10 +23,7 @@
             </ul>
         </nav>
     </div>
-</header>
-
-<main>
-    <section id="main-part">
+    <section>
         <div class="search-bar">
             <input type="text"placeholder="Recherche par personnage, par fabricant, par catégorie"/>
             <div>
@@ -47,7 +44,10 @@
                 Les plus belles statuettes sur vos étagères et dans vos vitrines.</h1>
         </div>
     </section>
-    <section id="img-figures-part">
+</header>
+
+<main>
+    <section>
         <div>
             <img class="grogu" src="../public/assets/img/bgd-image-grogu.png" alt="">
             <img class="figures" src="../public/assets/img/bgd-image-figures.jpeg" alt="">
@@ -132,21 +132,4 @@
     </section>
 </main>
 
-<footer>
-    <nav>
-        <ul class="footer-legal-notices">
-            <img class="logo-footer" src="../public/assets/img/logo.png">
-            <li><a class="footer-informations" href="#">Mentions légales</a></li>
-            <li><a class="footer-informations" href="#">Contact</a></li>
-            <li><a class="footer-informations" href="#">Aide</a></li>
-        </ul>
-    </nav>
-    <div>
-        <img onclick="topFunction()" id="btn-top" src="../public/assets/img/top.png" alt="top arrow">
-    </div>
-</footer>
-
-<script src="../assets/index.js"></script>
-
-</body>
-</html>
+{% endblock main%}
