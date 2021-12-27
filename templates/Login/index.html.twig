@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+<section id="content">
+    <div class="grid">
+        <form action="/" method="post" class="form login">
+            <div class="login__header">
+                <h3 class="login__title">Connexion</h3>
+            </div>
+
+            <div class="login__body">
+                <div class="form__field">
+                    <input type="pseudo" placeholder="Pseudo" required>
+                </div>
+                <div class="form__field">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form__field">
+                    <input type="password" placeholder="Password" required>
+                </div>
+            </div>
+
+            <div class="login__footer">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock main %}
+

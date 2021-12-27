@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site</title>
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/button-top.css') }}">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
         <nav>
             <ul class="main-navbar-content">
                 <li><a class="navbar-route" href="#">Ma collection</a></li>
-                <li><a class="navbar-route" href="#">Connexion</a></li>
+                <li><a class="navbar-route" href="{{ path('login') }}">Connexion</a></li>
             </ul>
         </nav>
     </div>
