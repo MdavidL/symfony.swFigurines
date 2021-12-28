@@ -27,6 +27,11 @@ class Product
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $media;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Product
     public function setPrice(int $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getMedia(): ?int
+    {
+        return $this->media;
+    }
+
+    public function setMedia(int $media): self
+    {
+        $this->media = $media;
 
         return $this;
     }

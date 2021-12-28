@@ -7,7 +7,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PublicMenuController extends AbstractController
 {
-
     /**
      * @Route ("/", name="home")
      */
@@ -16,6 +15,14 @@ class PublicMenuController extends AbstractController
 
         return $this->render('public/home.html.twig');
 
+    }
+
+    /**
+     * @Route ("/products", name="products")
+     */
+    public function products()
+    {
+        dump('test');die;
     }
 
 }

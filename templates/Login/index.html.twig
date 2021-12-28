@@ -6,6 +6,11 @@
     {% endif %}
 
 <section id="content">
+    <div class="alert-message">
+    {% for message in app.flashes('success') %}
+        <a class="alert-success"href="{{ path('login') }}">{{ message }}</a>
+    {% endfor %}
+    </div>
     <div class="grid">
         <form action="{{ path('login') }}" method="post" class="form login">
             <div class="login__header">
