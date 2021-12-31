@@ -1,0 +1,36 @@
+{% extends "admin/form.html.twig" %}
+
+{% block main %}
+
+        <section id="content">
+            <div >
+                <form action="{{ path('admin_product_create') }}" method="post" class="form login">
+                    <div >
+                        <h3 class="title">Créer une fiche produit</h3>
+                    </div>
+
+                    {{ form_start(productForm) }}
+
+                    {{ form(productForm) }}
+                    <div class="">
+                        <div class="">
+
+                        </div>
+                        <div class="">
+
+                        </div>
+                        <div class="">
+
+                        </div>
+                    </div>
+
+                    {{ form_end(productForm) }}
+
+                    <div class="">
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+{% endblock main %}

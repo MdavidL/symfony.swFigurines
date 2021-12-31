@@ -8,7 +8,7 @@
 <section id="content">
     <div class="alert-message">
     {% for message in app.flashes('success') %}
-        <a class="alert-success"href="{{ path('login') }}">{{ message }}</a>
+        <a class="alert-success" href="{{ path('login') }}">{{ message }}</a>
     {% endfor %}
     </div>
     <div class="grid">

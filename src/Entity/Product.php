@@ -23,14 +23,29 @@ class Product
     private $name;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $manufacturer;
+
+    /**
      * @ORM\Column(type="integer")
      */
     private $price;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=50)
      */
-    private $media;
+    private $category;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $picture;
 
     public function getId(): ?int
     {
@@ -49,6 +64,30 @@ class Product
         return $this;
     }
 
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getManufacturer(): ?string
+    {
+        return $this->manufacturer;
+    }
+
+    public function setManufacturer(string $manufacturer): self
+    {
+        $this->manufacturer = $manufacturer;
+
+        return $this;
+    }
+
     public function getPrice(): ?int
     {
         return $this->price;
@@ -61,15 +100,28 @@ class Product
         return $this;
     }
 
-    public function getMedia(): ?int
+    public function getCategory(): ?string
     {
-        return $this->media;
+        return $this->category;
     }
 
-    public function setMedia(int $media): self
+    public function setCategory(string $category): self
     {
-        $this->media = $media;
+        $this->category = $category;
 
         return $this;
     }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
 }

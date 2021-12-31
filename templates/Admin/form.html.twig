@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/form.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}" />
+</head>
+<body>
+
+<header>
+    <a class="icon-logo" href="{{ path('dashboard') }}">MENU</a>
+    <div class="main-navbar">
+        <nav>
+            <ul class="main-navbar-content">
+                <li><a class="navbar-route" href="{{ path('admin_product_create') }}">Créer une fiche</a></li>
+                <li><a class="navbar-route" href="#">Supprimer/Mettre à jour une fiche</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+{% block main %}{% endblock main %}
+
+<footer>
+</footer>
+</body>
+</html>
+
+
