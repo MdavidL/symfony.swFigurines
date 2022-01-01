@@ -24,7 +24,7 @@ class ProductType extends AbstractType
                 'required' => false,
 
             ])
-            ->add('submit', SubmitType::class)
+            ->add('creation', SubmitType::class)
         ;
     }
 

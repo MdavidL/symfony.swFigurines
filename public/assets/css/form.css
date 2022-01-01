@@ -1,5 +1,21 @@
+h3 {
+    text-align: center;
+    height: 5vh;
+}
+input {
+    width: 20rem;
+}
 #content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.form {
+    padding: 1rem;
+    background-color: rgba(237, 237, 237, 1);
+    border-radius: 5px;
+}
+.widget {
+    padding-bottom: 1rem;
+}
+

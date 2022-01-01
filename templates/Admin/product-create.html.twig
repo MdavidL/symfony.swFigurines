@@ -3,32 +3,59 @@
 {% block main %}
 
         <section id="content">
-            <div >
-                <form action="{{ path('admin_product_create') }}" method="post" class="form login">
+            <div class="window">
+                <form action="{{ path('admin_product_create') }}" method="post" class="form">
                     <div >
-                        <h3 class="title">Créer une fiche produit</h3>
+                        <h3 class="title">CRÉER UNE FICHE PRODUIT</h3>
                     </div>
 
                     {{ form_start(productForm) }}
 
-                    {{ form(productForm) }}
-                    <div class="">
-                        <div class="">
-
-                        </div>
-                        <div class="">
-
-                        </div>
-                        <div class="">
-
-                        </div>
+                    <div class="label">
+                    {{ form_label(productForm.name, 'Nom') }}
                     </div>
+                    <div class="widget">
+                        {{ form_widget(productForm.name) }}
+                    </div>
+
+                    <div class="label">
+                        {{ form_label(productForm.description, 'Description') }}
+                    </div>
+                    <div class="widget">
+                        {{ form_widget(productForm.description) }}
+                    </div>
+
+                    <div class="label">
+                        {{ form_label(productForm.manufacturer, 'Fabricant') }}
+                    </div>
+                    <div class="widget">
+                        {{ form_widget(productForm.manufacturer) }}
+                    </div>
+
+                    <div class="label">
+                        {{ form_label(productForm.price, 'Prix') }}
+                    </div>
+                    <div class="widget">
+                        {{ form_widget(productForm.price) }}
+                    </div>
+
+                    <div class="label">
+                        {{ form_label(productForm.category, 'Catégorie') }}
+                    </div>
+                    <div class="widget">
+                        {{ form_widget(productForm.category) }}
+                    </div>
+
+                    <div class="label">
+                        {{ form_label(productForm.picture, 'Image') }}
+                    </div>
+                    <div class="widget">
+                        {{ form_widget(productForm.picture) }}
+                    </div>
+
 
                     {{ form_end(productForm) }}
 
-                    <div class="">
-
-                    </div>
                 </form>
             </div>
         </section>
