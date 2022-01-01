@@ -5,10 +5,27 @@ h3 {
 input {
     width: 20rem;
 }
+button {
+    background-color: rgba(76,175,79, 1);
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    border-radius: 100px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(50, 121, 52);
+}
 #content {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.window {
+    padding-bottom: 5rem;
 }
 .form {
     padding: 1rem;

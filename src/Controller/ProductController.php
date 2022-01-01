@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Product;
+use App\Entity\Productadd;
 use App\Form\ProductType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,7 +17,7 @@ class ProductController extends AbstractController
      */
     public function productCreate(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger)
     {
-        $product = new Product();
+        $product = new Productadd();
         $productForm = $this->createForm(ProductType::class, $product);
         $productForm->handleRequest($request);
 
