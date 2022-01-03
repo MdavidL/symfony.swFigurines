@@ -1,0 +1,16 @@
+{% extends "admin/form.html.twig" %}
+
+{% block main %}
+
+    <section id="product">
+        <img src="../assets/img/Figurine-Hot-Toys-MMS524-Star-Wars-3-Revenge-Of-The-Sith-Commander-Cody.jpeg">
+            <article>
+                <h3>{{ product.name }}</h3>
+                <h4{{ product.manufacturer }}</h4>
+                <h4>{{ product.category }}</h4>
+                <h4>{{ product.description }}</h4>
+                <h4>{{ product.price }}</h4>
+            </article>
+    </section>
+
+{% endblock main %}

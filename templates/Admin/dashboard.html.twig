@@ -2,8 +2,24 @@
 
 {% block main %}
 
-<section id="content">
-
+<section id="products">
+    {% for productadd  in products %}
+        <div class="figure">
+            <div class="card-container">
+                <article>
+                    <div class="card">
+                        <a href="{{ path('admin_product', {"id": productadd.id}) }}"><img src="../public/assets/img/Figurine-Hot-Toys-MMS524-Star-Wars-3-Revenge-Of-The-Sith-Commander-Cody.jpeg" alt="Star Wars figure"/></a>
+                        <div class="card-content">
+                            <h4>{{ productadd.name }}{{ productadd.manufacturer }}</h4>
+                            <h4>{{ productadd.price }}</h4>
+                            <a href="{{ path('admin_product_delete', {"id": productadd.id}) }}"><img src="../public/assets/img/bin.png" class="icon-bin" alt="bin logo"></a>
+                            <a href="{{ path('admin_product_update', {"id": productadd.id}) }}"><img src="../public/assets/img/update.png" class="icon-update" alt="update logo"></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    {% endfor %}
 </section>
 
 {% endblock main %}

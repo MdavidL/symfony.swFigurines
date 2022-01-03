@@ -20,6 +20,8 @@ button:hover{
     background-color: rgb(50, 121, 52);
 }
 #content {
+    background-color: rgba(225,219,202, 1);
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;

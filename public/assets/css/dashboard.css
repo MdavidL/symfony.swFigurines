@@ -48,9 +48,34 @@ header {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
 }
 /*MAIN*/
-#content {
+#products {
     background-color: rgba(225,219,202, 1);
-    height: 90vh;
+    height: auto;
+    padding-right: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.figure {
+    max-width: 40%;
+    height: auto;
+    padding-top: 2rem;
+}
+.figure article {
+    text-align: center;
+}
+.card-content {
+    padding-bottom: 5rem;
+}
+.card-content .icon-bin {
+    max-width: 4%;
+    height: auto;
+    padding-top: 1rem;
+}
+.card-content .icon-update {
+    max-width: 4%;
+    height: auto;
+    padding: 1rem 0 0 2rem;
 }
 @media screen and (max-width: 992px) {
     .icon-logo {

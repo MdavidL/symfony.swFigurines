@@ -1,0 +1,12 @@
+#product {
+    background-color: rgba(225,219,202, 1);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article {
+    padding-left: 10rem;
+    display: flex;
+    flex-direction: column;
+}

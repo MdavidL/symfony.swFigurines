@@ -1,0 +1,62 @@
+{% extends "admin/form.html.twig" %}
+
+{% block main %}
+
+    <section id="content">
+        <div class="window">
+            <form action="{{ path('admin_product_create') }}" method="post" class="form">
+                <div >
+                    <h3 class="title">MODIFIER UNE FICHE PRODUIT</h3>
+                </div>
+
+                {{ form_start(productForm) }}
+
+                <div class="label">
+                    {{ form_label(productForm.name, 'Nom') }}
+                </div>
+                <div class="widget">
+                    {{ form_widget(productForm.name) }}
+                </div>
+
+                <div class="label">
+                    {{ form_label(productForm.description, 'Description') }}
+                </div>
+                <div class="widget">
+                    {{ form_widget(productForm.description) }}
+                </div>
+
+                <div class="label">
+                    {{ form_label(productForm.manufacturer, 'Fabricant') }}
+                </div>
+                <div class="widget">
+                    {{ form_widget(productForm.manufacturer) }}
+                </div>
+
+                <div class="label">
+                    {{ form_label(productForm.price, 'Prix') }}
+                </div>
+                <div class="widget">
+                    {{ form_widget(productForm.price) }}
+                </div>
+
+                <div class="label">
+                    {{ form_label(productForm.category, 'Catégorie') }}
+                </div>
+                <div class="widget">
+                    {{ form_widget(productForm.category) }}
+                </div>
+
+                <div class="label">
+                    {{ form_label(productForm.picture, 'Image') }}
+                </div>
+                <div class="widget">
+                    {{ form_widget(productForm.picture) }}
+                </div>
+
+                {{ form_end(productForm) }}
+
+            </form>
+        </div>
+    </section>
+
+{% endblock main %}
