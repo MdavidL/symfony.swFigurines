@@ -48,34 +48,40 @@ header {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
 }
 /*MAIN*/
+.bgd-title {
+    background-color: rgba(225,219,202, 1);
+    text-align: center;
+    padding-bottom: 3rem;
+}
 #products {
     background-color: rgba(225,219,202, 1);
-    height: auto;
+    margin: auto;
     padding-right: 8rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.figure {
-    max-width: 40%;
-    height: auto;
-    padding-top: 2rem;
-}
-.figure article {
+.card-container {
     text-align: center;
 }
+.card-container article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article img {
+    width: 70%;
+}
 .card-content {
-    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.card-content .icon-bin {
-    max-width: 4%;
-    height: auto;
-    padding-top: 1rem;
-}
-.card-content .icon-update {
-    max-width: 4%;
-    height: auto;
-    padding: 1rem 0 0 2rem;
+.logos {
+    width: 30%;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
 }
 @media screen and (max-width: 992px) {
     .icon-logo {

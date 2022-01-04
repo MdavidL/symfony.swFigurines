@@ -1,0 +1,20 @@
+.title h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+#products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-figure {
+    text-align: center;
+    margin: auto;
+    padding-top: 3rem;
+}
+    .card-detail img {
+       max-width: 70%;
+    }

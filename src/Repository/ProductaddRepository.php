@@ -6,12 +6,6 @@ use App\Entity\Productadd;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
-/**
- * @method Productadd|null find($id, $lockMode = null, $lockVersion = null)
- * @method Productadd|null findOneBy(array $criteria, array $orderBy = null)
- * @method Productadd[]    findAll()
- * @method Productadd[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
- */
 class ProductaddRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
@@ -19,6 +13,18 @@ class ProductaddRepository extends ServiceEntityRepository
         parent::__construct($registry, Productadd::class);
     }
 
+    public function searchByProducts($word)
+    {
+        $queryBuilder = $this->createQueryBuilder('product');
+
+        $query = $queryBuilder->select('product')
+            ->where( $qb->expr()->andX(
+                $qb->expr()->orX('product.name LIKE :word')
+            ->setParameter('word', '%'.$word.'%')
+            ->getQuery();
+
+        return $query->getResult();
+    }
     // /**
     //  * @return Productadd[] Returns an array of Productadd objects
     //  */

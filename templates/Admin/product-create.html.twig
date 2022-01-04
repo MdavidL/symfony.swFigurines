@@ -5,11 +5,12 @@
         <section id="content">
             <div class="window">
                 <form action="{{ path('admin_product_create') }}" method="post" class="form">
-                    <div >
-                        <h3 class="title">CRÉER UNE FICHE PRODUIT</h3>
-                    </div>
 
                     {{ form_start(productForm) }}
+
+                    <div>
+                        <h3 class="title">CRÉER UNE FICHE PRODUIT</h3>
+                    </div>
 
                     <div class="label">
                     {{ form_label(productForm.name, 'Nom') }}
@@ -33,7 +34,7 @@
                     </div>
 
                     <div class="label">
-                        {{ form_label(productForm.price, 'Prix') }}
+                        {{ form_label(productForm.price, 'Cote €') }}
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.price) }}

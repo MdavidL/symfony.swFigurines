@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Repository\ProductaddRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PublicMenuController extends AbstractController
@@ -20,9 +22,28 @@ class PublicMenuController extends AbstractController
     /**
      * @Route ("/products", name="products")
      */
-    public function products()
+    public function products(ProductaddRepository $productaddRepository)
     {
-        dump('test');die;
+        $productadd = $productaddRepository->findAll();
+        return $this->render('public/products.html.twig', [
+            'products' =>$productadd
+        ]);
     }
+
+    /**
+     * @Route ("/search", name="public_search_products")
+     */
+    public function searchProducts(ProductaddRepository $productaddRepository, Request $request)
+    {
+        $word = $request->query->get('a');
+
+        $products = $productaddRepository->searchByProducts($word);
+
+        return $this->render('public/search.html.twig', [
+            'products' =>$products
+        ]);
+    }
+
+
 
 }
