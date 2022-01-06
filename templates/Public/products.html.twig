@@ -11,6 +11,9 @@
             <article>
                 <div class="card-detail">
                     <a href="{{ path('admin_product', {"id": productadd.id}) }}"><img src="../public/assets/img/Figurine-Hot-Toys-MMS524-Star-Wars-3-Revenge-Of-The-Sith-Commander-Cody.jpeg" alt="Star Wars figure"/></a>
+                    <div class="like">
+                        <a href="{{ path('wishlist_create', {"id": productadd.id}) }}"><img src="../public/assets/img/like-black.png"/></a>
+                    </div>
                     <div class="card-content">
                         <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>
                         <h4>Cote: {{ productadd.price }}€</h4>

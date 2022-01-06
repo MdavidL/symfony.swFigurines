@@ -35,7 +35,7 @@ class PublicMenuController extends AbstractController
      */
     public function searchProducts(ProductaddRepository $productaddRepository, Request $request)
     {
-        $word = $request->query->get('a');
+        $word = $request->query->get('q');
 
         $products = $productaddRepository->searchByProducts($word);
 

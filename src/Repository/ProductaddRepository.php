@@ -18,13 +18,13 @@ class ProductaddRepository extends ServiceEntityRepository
         $queryBuilder = $this->createQueryBuilder('product');
 
         $query = $queryBuilder->select('product')
-            ->where( $qb->expr()->andX(
-                $qb->expr()->orX('product.name LIKE :word')
-            ->setParameter('word', '%'.$word.'%')
+            ->where('product.name LIKE :word', 'product.manufacturer LIKE :word')
+            ->setParameter('word', '%' . $word . '%')
             ->getQuery();
 
-        return $query->getResult();
+        return $query->getResult($word);
     }
+}
     // /**
     //  * @return Productadd[] Returns an array of Productadd objects
     //  */
@@ -53,4 +53,4 @@ class ProductaddRepository extends ServiceEntityRepository
         ;
     }
     */
-}
+

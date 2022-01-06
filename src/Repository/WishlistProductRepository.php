@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Wishlist;
+use App\Entity\WishlistProduct;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Wishlist|null find($id, $lockMode = null, $lockVersion = null)
- * @method Wishlist|null findOneBy(array $criteria, array $orderBy = null)
- * @method Wishlist[]    findAll()
- * @method Wishlist[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method WishlistProduct|null find($id, $lockMode = null, $lockVersion = null)
+ * @method WishlistProduct|null findOneBy(array $criteria, array $orderBy = null)
+ * @method WishlistProduct[]    findAll()
+ * @method WishlistProduct[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class WishlistRepository extends ServiceEntityRepository
+class WishlistProductRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Wishlist::class);
+        parent::__construct($registry, WishlistProduct::class);
     }
 
     // /**
-    //  * @return Wishlist[] Returns an array of Wishlist objects
+    //  * @return WishlistProduct[] Returns an array of WishlistProduct objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class WishlistRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Wishlist
+    public function findOneBySomeField($value): ?WishlistProduct
     {
         return $this->createQueryBuilder('w')
             ->andWhere('w.exampleField = :val')

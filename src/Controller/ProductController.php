@@ -23,6 +23,7 @@ class ProductController extends AbstractController
         $productForm = $this->createForm(ProductType::class, $product);
         $productForm->handleRequest($request);
 
+
         if ($productForm->isSubmitted() && $productForm->isValid()) {
             $coverFile = $productForm->get('picture')->getData();
 
