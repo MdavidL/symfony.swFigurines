@@ -135,7 +135,7 @@ header {
     width: 0;
     height: 0.1vh;
     left: 50%;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 1);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
 }
 .element-list:hover:after {

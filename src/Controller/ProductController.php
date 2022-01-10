@@ -86,7 +86,10 @@ class ProductController extends AbstractController
 
             $entityManager->persist($product);
             $entityManager->flush();
+
+            return $this->redirectToRoute('dashboard');
         }
+
 
         return $this->render('admin/product-update.html.twig', [
             'productForm' => $productForm->createView()
