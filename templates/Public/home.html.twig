@@ -34,58 +34,15 @@
                 <p>Les figurines du moment</p>
             </div>
             <section class="figures-cards">
-                <div class="figure">
-                    <div class="card-container">
-                        <article>
-                            <div class="card">
-                                <img src="../public/assets/img/hot-toys-darth-maul-speeder.jpeg" alt="Star Wars figure"/>
-                                <div class="card-content">
-                                    <h4>Figurine Hot Toys Darth Maul with speeder Special Edition</h4>
-                                    <h5>Cote: 690€</h5>
+                {% for productadd in lastFigures %}
+                                <div class="card">
+                                    <a href="{{ path('public_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt=""></a>
+                                    <div class="card-content">
+                                        <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>
+                                        <h4 id="price">Cote: {{ productadd.price }}€</h4>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="figure">
-                    <div class="card-container">
-                        <article>
-                            <div class="card">
-                                <img src="../public/assets/img/sideshow-han-solo-empire.jpg" alt="Star Wars figure"/>
-                                <div class="card-content">
-                                    <h4>Statuette Han Solo Empire Strikes Back Sideshow Collectibles</h4>
-                                    <h5>Cote: 600€</h5>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="figure">
-                    <div class="card-container">
-                        <article>
-                            <div class="card">
-                                <img src="../public/assets/img/hot-toys-anakin-darkside.jpg" alt="Star Wars figure"/>
-                                <div class="card-content">
-                                    <h4>Figurine Hot Toys Anakin Skywalker dark side Hot Toys</h4>
-                                    <h5>Cote: 450€</h5>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="figure">
-                    <div class="card-container">
-                        <article>
-                            <div class="card">
-                                <img src="../public/assets/img/sideshow-aayla-secura.jpg" alt="Star Wars figure"/>
-                                <div class="card-content">
-                                    <h4>Statuette Aayla Secura Revenge Of The Sith Sideshow Collectibles</h4>
-                                    <h5>Cote: 420€</h5>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+                {% endfor %}
             </section>
             <div>
                 <a class="btn btn-fonction" href="{{ path('products') }}">voir plus</a>
@@ -96,7 +53,7 @@
             <div class="newsletter-form">
                 <div class="element-newsletter">
                     <h3>Vous souhaitez être informé</br> des dernières nouveautés ?</h3>
-                    <p>N'hésitez pas à vous inscrire</p>
+                    <p id="subscription-newsletter">N'hésitez pas à vous inscrire</p>
                 </div>
                 <div class="newsletter-bar">
                     <form action="{{ path('newsletter') }}" method="post" class="form">

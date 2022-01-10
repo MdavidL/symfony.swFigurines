@@ -105,8 +105,6 @@ class ProductController extends AbstractController
 
         return $this->render('admin/product.html.twig', ['product'=>$product]);
     }
-
-
 }
 
 

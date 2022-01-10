@@ -11,13 +11,13 @@
                 <div class="card-container">
                     <article>
                         <div class="card-detail">
-                            <a href="{{ path('admin_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt=""></a>
+                            <a href="{{ path('public_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt=""></a>
                                 <div class="like">
                                     <a href="{{ path('wishlist_create', {"id": productadd.id}) }}"><img src="../public/assets/img/like-black.png"/></a>
                                 </div>
                             <div class="card-content">
                                 <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>
-                                <h4>Cote: {{ productadd.price }}€</h4>
+                                <h4 id="price">Cote: {{ productadd.price }}€</h4>
                             </div>
                         </div>
                     </article>

@@ -30,6 +30,6 @@ class NewsletterController extends AbstractController
         }
         return $this->render('public/home.html.twig', [
             'newsletterForm' => $newsletterForm->createView()
-            ]);
+        ]);
     }
 }

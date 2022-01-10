@@ -15,11 +15,12 @@ class PublicMenuController extends AbstractController
     /**
      * @Route ("/", name="home")
      */
-    public function home(Request $request, EntityManagerInterface $entityManager)
+    public function home(Request $request, EntityManagerInterface $entityManager, ProductaddRepository $productaddRepository)
     {
         $newsletter = new Newsletter();
         $newsletterForm = $this->createForm(NewsletterType::class, $newsletter);
         $newsletterForm->handleRequest($request);
+        $lastFigures = $productaddRepository->findBy([], ['id' => 'DESC'], 4);
 
         if ($newsletterForm->isSubmitted() && $newsletterForm->isValid()) {
 
@@ -30,7 +31,8 @@ class PublicMenuController extends AbstractController
             return $this->redirectToRoute('home');
         }
         return $this->render('public/home.html.twig', [
-            'newsletterForm' => $newsletterForm->createView()
+            'newsletterForm' => $newsletterForm->createView(),
+            'lastFigures'=> $lastFigures,
         ]);
     }
 
@@ -46,6 +48,17 @@ class PublicMenuController extends AbstractController
     }
 
     /**
+     * @Route ("/product{id}", name="public_product")
+     */
+    public function product($id, ProductaddRepository $productaddRepository)
+    {
+        $product = $productaddRepository->find($id);
+
+        return $this->render('public/product.html.twig', ['product'=>$product]);
+    }
+
+
+    /**
      * @Route ("/search", name="public_search_products")
      */
     public function searchProducts(ProductaddRepository $productaddRepository, Request $request)
@@ -58,8 +71,4 @@ class PublicMenuController extends AbstractController
             'products' =>$products
         ]);
     }
-
-
-
-
 }

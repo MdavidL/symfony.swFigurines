@@ -20,9 +20,6 @@ h1 {
 h3 {
     font-size: 1.5rem;
 }
-h4 {
-    padding-bottom: 1rem;
-}
 /*HEADER*/
 header {
     height: 10vh;
@@ -173,9 +170,10 @@ header {
     justify-content: center;
 }
 .figures-cards {
-    padding-left: 8rem;
+    text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .element-figures p {
     font-size: 2rem;
@@ -183,27 +181,8 @@ header {
     font-weight: bolder;
     padding-bottom: 3rem;
 }
-.figure {
-    text-align: center;
-}
-.figure .card img{
-    width: 80%;
-    height: auto;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-}
-.figure .card-container {
-    display: flex;
-    justify-content: center;
-}
-.figure .card .card-content {
-    max-width: 15rem;
-    padding: 1rem 1rem 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+.card img{
+    max-width: 90%;
 }
 #newsletter-part {
     background-color: rgba(250, 250, 250, 1);
@@ -211,6 +190,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#subscription-newsletter {
+    color: rgba(250, 250, 250, 1);
 }
 .newsletter-bgd {
     position: absolute;
@@ -376,7 +358,19 @@ footer {
         display: none;
     }
     #figures-group {
-        height: 85vh;
+        height: 295vh;
+    }
+    .card img{
+        max-width: 70%;
+    }
+    .figures-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .element-figures p {
+        padding-bottom: 0.5rem;
     }
     #newsletter-part {
         height: 85vh;
@@ -384,6 +378,9 @@ footer {
     .newsletter-bar input {
         min-width: 90%;
         height: 1vh;
+    }
+    button {
+        margin-left: 1.5rem;
     }
     .footer-legal-notices {
         padding: 0 0 1rem 7rem;
@@ -432,22 +429,10 @@ footer {
         text-align: center;
     }
     #figures-group {
-        height: 230vh;
-    }
-    .figures-cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .figure article {
-        width: 60%;
+        height: 250vh;
     }
     .figure article img {
         min-width: 80%;
-    }
-    .figure .card .card-content {
-        padding: 1rem 1rem 2rem;
     }
     #newsletter-part {
         height: 70vh;
