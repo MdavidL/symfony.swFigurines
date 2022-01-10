@@ -3,13 +3,14 @@
 {% block main %}
 
     <section id="product">
-        <img src="../assets/img/Figurine-Hot-Toys-MMS524-Star-Wars-3-Revenge-Of-The-Sith-Commander-Cody.jpeg">
+        <img src="{{ asset('uploads/cover/'~product.picture) }}" alt="">
             <article>
                 <h3>{{ product.name }}</h3>
-                <h4{{ product.manufacturer }}</h4>
-                <h4>{{ product.category }}</h4>
-                <h4>{{ product.description }}</h4>
-                <h4>{{ product.price }}€</h4>
+                <p><em>Episode:</em> {{ product.episode }}</p>
+                <p><em>Fabricant:</em> {{ product.manufacturer }}</p>
+                <p><em>Catégorie:</em> {{ product.category }}</p>
+                <p><em>Description:</em> {{ product.description }}</p>
+                <p id="estimate">Cote: {{ product.price }}€</p>
             </article>
     </section>
 

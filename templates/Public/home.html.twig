@@ -99,10 +99,13 @@
                     <p>N'hésitez pas à vous inscrire</p>
                 </div>
                 <div class="newsletter-bar">
-                    <input type="email"/>
-                    <div>
-                        <a class="btn btn-fonction" href="#">S'inscrire</a>
-                    </div>
+                    <form action="{{ path('newsletter') }}" method="post" class="form">
+                        {{ form_start(newsletterForm) }}
+                        <div class="widget">
+                            {{ form_widget(newsletterForm.email) }}
+                        </div>
+                        {{ form_end(newsletterForm) }}
+                    </form>
                 </div>
             </div>
         </section>

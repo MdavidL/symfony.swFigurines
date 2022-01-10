@@ -33,9 +33,10 @@ class WishlistProduct
     private $manufacturer;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\ManyToOne(targetEntity=Productadd::class, inversedBy="wishlists")
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $picture;
+    private $productadd;
 
     public function getId(): ?int
     {
@@ -78,15 +79,16 @@ class WishlistProduct
         return $this;
     }
 
-    public function getPicture(): ?string
+    public function getProductadd(): ?Productadd
     {
-        return $this->picture;
+        return $this->productadd;
     }
 
-    public function setPicture(?string $picture): self
+    public function setProductadd(?Productadd $productadd): self
     {
-        $this->picture = $picture;
+        $this->productadd = $productadd;
 
         return $this;
     }
+
 }

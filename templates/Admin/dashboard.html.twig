@@ -10,7 +10,7 @@
             <div class="card-container">
                 <article>
                     <div class="card">
-                        <a href="{{ path('admin_product', {"id": productadd.id}) }}"><img src="../public/assets/img/Figurine-Hot-Toys-MMS524-Star-Wars-3-Revenge-Of-The-Sith-Commander-Cody.jpeg" alt="Star Wars figure"/></a>
+                        <a href="{{ path('admin_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt=""></a>
                         <div class="card-content">
                             <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>
                             <h4>Cote: {{ productadd.price }}€</h4>

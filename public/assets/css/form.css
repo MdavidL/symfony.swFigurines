@@ -27,7 +27,7 @@ button:hover{
     align-items: center;
 }
 .window {
-    padding-bottom: 5rem;
+    padding: 1rem;
     background-color: rgba(237, 237, 237, 1);
 }
 .form {

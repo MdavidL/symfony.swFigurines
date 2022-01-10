@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProductaddRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,6 +48,21 @@ class Productadd
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $picture;
+
+    /**
+     * @ORM\OneToMany(targetEntity=WishlistProduct::class, mappedBy="productadd", orphanRemoval=true)
+     */
+    private $wishlists;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $episode;
+
+    public function __construct()
+    {
+        $this->wishlists = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -120,6 +137,48 @@ class Productadd
     public function setPicture(?string $picture): self
     {
         $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|WishlistProduct[]
+     */
+    public function getWishlists(): Collection
+    {
+        return $this->wishlists;
+    }
+
+    public function addWishlist(WishlistProduct $wishlist): self
+    {
+        if (!$this->wishlists->contains($wishlist)) {
+            $this->wishlists[] = $wishlist;
+            $wishlist->setProductadd($this);
+        }
+
+        return $this;
+    }
+
+    public function removeWishlist(WishlistProduct $wishlist): self
+    {
+        if ($this->wishlists->removeElement($wishlist)) {
+            // set the owning side to null (unless already changed)
+            if ($wishlist->getProductadd() === $this) {
+                $wishlist->setProductadd(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getEpisode(): ?string
+    {
+        return $this->episode;
+    }
+
+    public function setEpisode(string $episode): self
+    {
+        $this->episode = $episode;
 
         return $this;
     }

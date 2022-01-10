@@ -4,7 +4,6 @@
 
         <section id="content">
             <div class="window">
-                <form action="{{ path('admin_product_create') }}" method="post" class="form">
 
                     {{ form_start(productForm) }}
 
@@ -17,6 +16,13 @@
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.name) }}
+                    </div>
+
+                    <div class="label">
+                            {{ form_label(productForm.episode, 'Episode') }}
+                    </div>
+                    <div class="widget">
+                            {{ form_widget(productForm.episode) }}
                     </div>
 
                     <div class="label">
@@ -56,7 +62,6 @@
 
                     {{ form_end(productForm) }}
 
-                </form>
             </div>
         </section>
 

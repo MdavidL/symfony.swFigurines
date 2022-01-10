@@ -44,7 +44,27 @@ class WishlistController extends AbstractController
 
         $entityManager->flush();
 
-        return $this->render('public/wishlist.html.twig', ['wishlist_product'=>$wishlist]);
+        return $this->render('public/wishlist.html.twig', [
+            'wishlist_product'=>$wishlist]);
     }
 
 }
+
+   //   /**
+     //* @Route ("/wishlist/add", name="wishlist")
+     //*/
+    //public function wishlistAdd( Request $request, WishlistProductRepository $wishlistProductRepository, EntityManagerInterface $entityManager)
+    //{
+      //  $wishlist = $wishlistProductRepository->findAll();
+        //$wishlistForm = $this->createForm(WishlistType::class, $wishlist);
+        //$wishlistForm->handleRequest($request);
+
+        //$entityManager->add($wishlist);
+        //$entityManager->flush();
+
+        //return $this->render('public/wishlist.html.twig', [
+            //'wishlistForm' => $wishlistForm->createView()
+        //]);
+
+    //}
+

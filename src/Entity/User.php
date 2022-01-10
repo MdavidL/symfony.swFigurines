@@ -69,6 +69,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $roles = [];
 
+    /**
+     * @ORM\OneToOne(targetEntity=WishlistProduct::class, cascade={"persist", "remove"})
+     */
+    private $wishlist;
+
     public function getPassword(): ?string
     {
         return $this->password;
@@ -137,6 +142,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getWishlist(): ?WishlistProduct
+    {
+        return $this->wishlist;
+    }
+
+    public function setWishlist(?WishlistProduct $wishlist): self
+    {
+        $this->wishlist = $wishlist;
+
+        return $this;
     }
 
 }

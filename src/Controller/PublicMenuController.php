@@ -2,7 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Newsletter;
+use App\Form\NewsletterType;
 use App\Repository\ProductaddRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,11 +15,23 @@ class PublicMenuController extends AbstractController
     /**
      * @Route ("/", name="home")
      */
-    public function home()
+    public function home(Request $request, EntityManagerInterface $entityManager)
     {
+        $newsletter = new Newsletter();
+        $newsletterForm = $this->createForm(NewsletterType::class, $newsletter);
+        $newsletterForm->handleRequest($request);
 
-        return $this->render('public/home.html.twig');
+        if ($newsletterForm->isSubmitted() && $newsletterForm->isValid()) {
 
+            $entityManager->persist($newsletter);
+            $entityManager->flush();
+
+            $this->addFlash('success', "Votre mail a bien été enregistré !");
+            return $this->redirectToRoute('home');
+        }
+        return $this->render('public/home.html.twig', [
+            'newsletterForm' => $newsletterForm->createView()
+        ]);
     }
 
     /**
@@ -37,12 +52,13 @@ class PublicMenuController extends AbstractController
     {
         $word = $request->query->get('q');
 
-        $products = $productaddRepository->searchByProducts($word);
+        $products = $productaddRepository->searchByName($word);
 
         return $this->render('public/search.html.twig', [
             'products' =>$products
         ]);
     }
+
 
 
 
