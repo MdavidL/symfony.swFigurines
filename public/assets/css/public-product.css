@@ -6,7 +6,7 @@ h3 {
 p {
     color: rgba(57, 60, 65, 1);
 }
-article {
+#product-elements {
     width: 22rem;
     padding-left: 5rem;
     line-height: 2;

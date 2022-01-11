@@ -1,8 +1,16 @@
 {% extends "admin/form.html.twig" %}
 
 {% block main %}
-    <div class="bgd-title">
-        <h1>Toutes les figurines</h1>
+    <div>
+        <h1 id="bgd-title">Toutes les figurines</h1>
+        {% for message in app.flashes('product-ok') %}
+            <p id="alert-product" href="#">{{ message }}</p>
+        {% endfor %}
+    </div>
+    <div>
+        {% for message in app.flashes('product-update') %}
+            <p id="alert-product" href="#">{{ message }}</p>
+        {% endfor %}
     </div>
 <section id="products">
     {% for productadd  in products %}

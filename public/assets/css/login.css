@@ -58,6 +58,12 @@ header {
     height: 81vh;
     padding-top: 8rem;
 }
+.user-unknown{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: red;
+    padding-bottom: 2rem;
+}
 .alert-message {
     display: flex;
     justify-content: center;

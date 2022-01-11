@@ -18,8 +18,9 @@ class ProductaddRepository extends ServiceEntityRepository
         $queryBuilder = $this->createQueryBuilder('product');
 
         $query = $queryBuilder->select('product')
-            ->where('product.name LIKE :word', 'product.manufacturer LIKE :word')
+            ->where('product.name LIKE :word')
             ->setParameter('word', '%' . $word . '%')
+            ->orderBy('product.name', 'ASC')
             ->getQuery();
 
         return $query->getResult($word);

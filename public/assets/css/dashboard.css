@@ -48,10 +48,22 @@ header {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
 }
 /*MAIN*/
-.bgd-title {
+#bgd-title {
     background-color: rgba(225,219,202, 1);
     text-align: center;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
+}
+#message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#alert-product {
+    font-weight: bolder;
+    background-color: rgba(225,219,202, 1);
+    color: rgba(65,166,50,1);
+    padding: 2rem 0;
+    text-align: center;
 }
 #products {
     background-color: rgba(225,219,202, 1);

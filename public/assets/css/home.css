@@ -64,6 +64,15 @@ header {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
 }
 /*MAIN*/
+#message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#alert-mail {
+    font-weight: bolder;
+    color: rgba(65,166,50,1);
+}
 #main-part {
     height: 90vh;
 }

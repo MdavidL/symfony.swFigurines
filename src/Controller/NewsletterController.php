@@ -25,8 +25,9 @@ class NewsletterController extends AbstractController
             $entityManager->persist($newsletter);
             $entityManager->flush();
 
-            $this->addFlash('success', "Votre mail a bien été enregistré !");
+            $this->addFlash('mail-ok', "Votre mail a bien été enregistré !");
             return $this->redirectToRoute('home');
+
         }
         return $this->render('public/home.html.twig', [
             'newsletterForm' => $newsletterForm->createView()

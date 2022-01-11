@@ -27,8 +27,6 @@ class PublicMenuController extends AbstractController
             $entityManager->persist($newsletter);
             $entityManager->flush();
 
-            $this->addFlash('success', "Votre mail a bien été enregistré !");
-            return $this->redirectToRoute('home');
         }
         return $this->render('public/home.html.twig', [
             'newsletterForm' => $newsletterForm->createView(),
@@ -67,7 +65,7 @@ class PublicMenuController extends AbstractController
 
         $products = $productaddRepository->searchByName($word);
 
-        return $this->render('public/search.html.twig', [
+        return $this->render('public/research.html.twig', [
             'products' =>$products
         ]);
     }

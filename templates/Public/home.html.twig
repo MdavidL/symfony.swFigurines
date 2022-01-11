@@ -2,6 +2,13 @@
 
 {% block main %}
     <main>
+        <section id="message">
+            <div>
+                {% for message in app.flashes('mail-ok') %}
+                    <p id="alert-mail" href="#">{{ message }}</p>
+                {% endfor %}
+            </div>
+        </section>
         <section id="main-part">
             <div class="search-bar">
                 <input type="text"placeholder="Recherche par personnage, par fabricant, par catégorie"/>
@@ -20,7 +27,8 @@
                     </ul>
                 </nav>
                 <h1>Site de référencement de figurines sous licence Star Wars, pour les collectionneurs habités par la passion ... et  La Force.<br/>
-                    Les plus belles statuettes sur vos étagères et dans vos vitrines.</h1>
+                    Les plus belles statuettes sur vos étagères et dans vos vitrines.
+                </h1>
             </div>
         </section>
         <section id="img-figures-part">

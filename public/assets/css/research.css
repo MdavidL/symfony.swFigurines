@@ -1,0 +1,12 @@
+.title h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+#research-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

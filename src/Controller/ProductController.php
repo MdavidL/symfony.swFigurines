@@ -49,7 +49,7 @@ class ProductController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
-            $this->addFlash('success', "Le produit a bien été enregistré !");
+            $this->addFlash('product-ok', "La fiche a bien été créée !");
             return $this->redirectToRoute('dashboard');
         }
         return $this->render('admin/product-create.html.twig', [
@@ -87,9 +87,9 @@ class ProductController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
+            $this->addFlash('product-update', "La fiche a bien été mise à jour !");
             return $this->redirectToRoute('dashboard');
         }
-
 
         return $this->render('admin/product-update.html.twig', [
             'productForm' => $productForm->createView()
