@@ -69,4 +69,6 @@ class PublicMenuController extends AbstractController
             'products' =>$products
         ]);
     }
+
+
 }

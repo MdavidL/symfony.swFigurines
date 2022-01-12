@@ -59,6 +59,11 @@ class Productadd
      */
     private $episode;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $episode_id;
+
     public function __construct()
     {
         $this->wishlists = new ArrayCollection();
@@ -179,6 +184,18 @@ class Productadd
     public function setEpisode(string $episode): self
     {
         $this->episode = $episode;
+
+        return $this;
+    }
+
+    public function getEpisodeId(): ?int
+    {
+        return $this->episode_id;
+    }
+
+    public function setEpisodeId(int $episode_id): self
+    {
+        $this->episode_id = $episode_id;
 
         return $this;
     }

@@ -1,0 +1,29 @@
+{% extends "public/base.html.twig" %}
+
+{% block main %}
+
+    <div class="title">
+        <h1></h1>
+    </div>
+    <section id="products-list">
+        {% for products  in episode1 %}
+            <div class="card-figure">
+                <div class="card-container">
+                    <article>
+                        <div class="card-detail">
+                            <a href="{{ path('public_product', {"id": products.id}) }}"><img src="{{ asset('uploads/cover/'~products.picture) }}" alt=""></a>
+                            <div class="like">
+                                <a href="{{ path('wishlist_create', {"id": products.id}) }}"><img src="../public/assets/img/like-black.png"/></a>
+                            </div>
+                            <div class="card-content">
+                                <h4>{{ products.name }} {{ products.manufacturer }}</h4>
+                                <h4 id="price">Cote: {{ products.price }}€</h4>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+{% endblock main %}

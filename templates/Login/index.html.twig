@@ -12,7 +12,7 @@
 
     <div class="alert-message">
     {% for message in app.flashes('success') %}
-        <a class="alert-success" href="{{ path('login') }}">{{ message }}</a>
+        <p class="alert-success" href="#">{{ message }}</p>
     {% endfor %}
     </div>
 
@@ -35,7 +35,7 @@
             </div>
             <div class="login__footer">
                 <input type="submit" value="Login">
-                <input type="submit" value="Logout">
+                <input id="logout-btn" type="submit" value="Logout">
             </div>
         </form>
     </div>
