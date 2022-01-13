@@ -13,7 +13,7 @@
                         <div class="card-detail">
                             <a href="{{ path('public_product', {"id": products.id}) }}"><img src="{{ asset('uploads/cover/'~products.picture) }}" alt=""></a>
                             <div class="like">
-                                <a href="{{ path('wishlist_create', {"id": products.id}) }}"><img src="../public/assets/img/like-black.png"/></a>
+                                <a href="{{ path('public_wishlist', {"id": products.id}) }}"><img src="../public/assets/img/like-black.png"/></a>
                             </div>
                             <div class="card-content">
                                 <h4>{{ products.name }} {{ products.manufacturer }}</h4>

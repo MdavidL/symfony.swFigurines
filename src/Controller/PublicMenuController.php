@@ -20,7 +20,7 @@ class PublicMenuController extends AbstractController
         $newsletter = new Newsletter();
         $newsletterForm = $this->createForm(NewsletterType::class, $newsletter);
         $newsletterForm->handleRequest($request);
-        $lastFigures = $productaddRepository->findBy([], ['id' => 'DESC'], 4);
+            $lastFigures = $productaddRepository->findBy([], ['id' => 'DESC'], 4);
 
         if ($newsletterForm->isSubmitted() && $newsletterForm->isValid()) {
 

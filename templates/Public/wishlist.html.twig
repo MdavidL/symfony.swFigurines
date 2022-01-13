@@ -2,32 +2,28 @@
 
 {% block main %}
 
-<div class="title">
-  <h1>Ma wishlist</h1>
-</div>
-
+  <div class="title">
+    <h1></h1>
+  </div>
   <section id="products-list">
-
-    <div class="card-figure">
-      <div class="card-container">
-        <article>
-          <div class="card-detail">
-            <img src="../public/assets/img/Figurine-Hot-Toys-MMS524-Star-Wars-3-Revenge-Of-The-Sith-Commander-Cody.jpeg" alt="Star Wars figure"/>
-
-
-
-            <div class="card-content">
-
-
+    {% for products  in wishlist %}
+      <div class="card-figure">
+        <div class="card-container">
+          <article>
+            <div class="card-detail">
+              <a href="{{ path('public_product', {"id": products.id}) }}"><img src="{{ asset('uploads/cover/'~products.picture) }}" alt=""></a>
+              <div class="like">
+                <a href="{{ path('public_wishlist', {"id": products.id}) }}"><img src="../public/assets/img/like-black.png"/></a>
+              </div>
+              <div class="card-content">
+                <h4>{{ products.name }} {{ products.manufacturer }}</h4>
+                <h4 id="price">Cote: {{ products.price }}€</h4>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
-    </div>
+    {% endfor %}
   </section>
 
-
-
-
 {% endblock main %}
-
