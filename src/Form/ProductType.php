@@ -10,9 +10,11 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ProductType extends AbstractType
+// ProductType is the name of the abstract representation of the form
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        // We can see the different fields of the future form
         $builder
             ->add('name')
             ->add('episode')

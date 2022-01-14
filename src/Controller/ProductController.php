@@ -12,28 +12,38 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
+//Controller extends from the AbstractController
 class ProductController extends AbstractController
 {
+    //I want to create a form in order to create some new products in my Database.
+    //I use Annotations to create a Route. It will be the URL name.
     /**
      * @Route ("/admin/product/create", name="admin_product_create")
      */
+    //I create a public function for my Controller. So the productCreate() method will be called when a user browses to it.
     public function productCreate(Request $request, EntityManagerInterface $entityManager, SluggerInterface $slugger)
     {
         $product = new Productadd();
+        //I declare a variable for the form and I use the createForm method.
+        //I call the Form which was created before by using the class "ProductType"
         $productForm = $this->createForm(ProductType::class, $product);
+        //I call the handleRequest to process form data
         $productForm->handleRequest($request);
 
-
+        //I use the isSubmitted and isValid methods in order to secure the input.
+        //isValid call the database for a request
         if ($productForm->isSubmitted() && $productForm->isValid()) {
+            // for the uploading image
+            // get the data image
             $coverFile = $productForm->get('picture')->getData();
 
             if ($coverFile) {
-
+                //get the name of the image
                 $originalFilename = pathinfo($coverFile->getClientOriginalName(), PATHINFO_FILENAME);
-
+                //rename the file with an unique name
                 $safeFilename = $slugger->slug($originalFilename);
                 $newFilename = $safeFilename . '-' . uniqid() . '.' . $coverFile->guessExtension();
-
+                // move the file inside the public directory
                 try {
                     $coverFile->move(
                         $this->getParameter('cover_directory'),
@@ -43,15 +53,16 @@ class ProductController extends AbstractController
                 } catch (FileException $e) {
 
                 }
-
+                // save the name inside the newFilename column
                 $product->setPicture($newFilename);
             }
             $entityManager->persist($product);
             $entityManager->flush();
-
+            // I want a message for the confirmation of the product created
             $this->addFlash('product-ok', "La fiche a bien été créée !");
             return $this->redirectToRoute('dashboard');
         }
+        // I create a view in order to display the form
         return $this->render('admin/product-create.html.twig', [
             'productForm' => $productForm->createView()
         ]);
