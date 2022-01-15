@@ -11,7 +11,7 @@
                 <div class="card-container">
                     <article>
                         <div class="card-detail">
-                            <a href="{{ path('public_product', {"id": product.id}) }}"><img src="{{ asset('uploads/cover/'~product.picture) }}" alt=""></a>
+                            <a href="{{ path('public_product', {"id": product.id}) }}"><img src="{{ asset('uploads/cover/'~product.picture) }}" alt="image du produit"></a>
                             <div class="card-content">
                                 <h4>{{ product.name }} {{ product.manufacturer }}</h4>
                                 <h4 id="price">Cote: {{ product.price }}€</h4>

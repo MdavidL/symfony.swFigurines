@@ -36,7 +36,7 @@ header {
     position: absolute;
     min-width: 3%;
     height: auto;
-    padding: 1rem 0 0 2rem;
+    padding: 1rem 2rem;
     z-index: 0;
 }
 .icon-wishlist {
@@ -131,7 +131,7 @@ header {
 }
 .element-list {
     color: rgba(57, 60, 65, 1);
-    padding: 0 1rem 0 1rem;
+    padding: 1rem 1rem;
 }
 .element-list:after {
     position: absolute;
@@ -231,7 +231,7 @@ form {
     min-width: 130%;
     height: 2vh;
     margin-right: 5rem;
-    padding: 12px 18px;
+    padding: 0.5rem 1rem;
 }
 button {
     border: none;
@@ -258,19 +258,19 @@ footer {
     justify-content: center;
 }
 .footer-legal-notices {
-    padding: 0 0 1rem 5rem;
+    padding-bottom: 1rem;
     display: flex;
     align-items: center;
 }
 .logo-footer {
-    width: 25%;
+    width: 70%;
     height: auto;
 }
 .footer-informations {
     color: rgba(57, 60, 65, 1);
     font-size: 0.9rem;
     font-weight: bolder;
-    padding: 0 1rem 0 1rem;
+    padding: 1rem 1rem;
     text-shadow: -0.35px -0.35px 0 transparent, 0.35px 0.35px transparent;
 }
 .footer-informations:hover {
@@ -391,9 +391,6 @@ footer {
     button {
         margin-left: 1.5rem;
     }
-    .footer-legal-notices {
-        padding: 0 0 1rem 7rem;
-    }
 }
 @media screen and (max-width: 576px) {
     *,body {
@@ -461,17 +458,13 @@ footer {
     footer {
         height: 7vh;
     }
-    .footer-legal-notices {
-        text-align: center;
-        padding: 0 0 1rem 3rem;
-    }
     .logo-footer {
         width: 23%;
         height: auto;
     }
     .footer-informations {
         font-size: 0.7rem;
-        padding: 0 0.5rem 0 0.5rem;
+        padding: 0.5rem 0.5rem;
     }
 }
 

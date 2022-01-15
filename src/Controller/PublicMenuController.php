@@ -50,6 +50,7 @@ class PublicMenuController extends AbstractController
      */
     public function product($id, ProductaddRepository $productaddRepository)
     {
+        // we get back the product with his id
         $product = $productaddRepository->find($id);
 
         return $this->render('public/product.html.twig', ['product'=>$product]);
@@ -59,12 +60,14 @@ class PublicMenuController extends AbstractController
     /**
      * @Route ("/search", name="public_search_products")
      */
+    // I create a search function
     public function searchProducts(ProductaddRepository $productaddRepository, Request $request)
     {
+        // we call the get method to get the information from the DB
         $word = $request->query->get('q');
-
+        // we call an other method, searchByName, in order to get the result of our research
         $products = $productaddRepository->searchByName($word);
-
+        // I create a view to display the render
         return $this->render('public/research.html.twig', [
             'products' =>$products
         ]);

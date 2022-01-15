@@ -71,13 +71,15 @@ class ProductController extends AbstractController
     /**
      * @Route ("/admin/product/delete{id}", name="admin_product_delete")
      */
+    // I create a delete function
     public function productDelete($id, ProductaddRepository $productaddRepository, EntityManagerInterface $entityManager)
     {
+        // we get back the product with his id
         $product = $productaddRepository->find($id);
-
+        //Save and send data to the DB.
         $entityManager->remove($product);
         $entityManager->flush();
-
+        // I create a view in order to display the form
         return $this->redirectToRoute('dashboard');
 
     }
@@ -87,21 +89,22 @@ class ProductController extends AbstractController
      */
     public function productUpdate($id, Request $request, ProductaddRepository $productaddRepository, EntityManagerInterface $entityManager)
     {
+        // we get back the product with his id
         $product = $productaddRepository->find($id);
-
+        // we create the Form
         $productForm = $this->createForm(ProductType::class, $product);
-
         $productForm->handleRequest($request);
-
+        //I create a condition and I use the isSubmitted and isValid methods in order to secure the input.
+        //isValid call the database for a request
         if ($productForm->isSubmitted() && $productForm->isValid()) {
-
+            //Save and send data to the DB.
             $entityManager->persist($product);
             $entityManager->flush();
-
+            // I want a message for the confirmation of the update
             $this->addFlash('product-update', "La fiche a bien été mise à jour !");
             return $this->redirectToRoute('dashboard');
         }
-
+        // I create a view in order to display the form
         return $this->render('admin/product-update.html.twig', [
             'productForm' => $productForm->createView()
             ]);
@@ -112,6 +115,7 @@ class ProductController extends AbstractController
      */
     public function product($id, ProductaddRepository $productaddRepository)
     {
+        // we get back the product with his id
         $product = $productaddRepository->find($id);
 
         return $this->render('admin/product.html.twig', ['product'=>$product]);

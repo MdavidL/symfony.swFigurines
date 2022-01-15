@@ -1,76 +1,75 @@
 {% extends "admin/form.html.twig" %}
+{# With extends, I link the main block with my header and footer which are on an other html.twig #}
 
 {% block main %}
-
+         {# Here the start of the content of my form #}
         <section id="content">
-
-                 <div class="window">
-
+           <div class="window">
+                     {# I use form_start() for the opening tag and form_end() for the closing tag #}
                     {{ form_start(productForm) }}
-
                     <div>
                         <h3 class="title">CRÉER UNE FICHE PRODUIT</h3>
                     </div>
-
+                     {# I use too form_label and form_widget for more modularity #}
                     <div class="label">
+                       {# This the label for the name of the property #}
                     {{ form_label(productForm.name, 'Nom') }}
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.name) }}
                     </div>
-
+                    {# This the label for the episode of the property #}
                     <div class="label">
                             {{ form_label(productForm.episode, 'Episode') }}
                     </div>
                     <div class="widget">
                             {{ form_widget(productForm.episode) }}
                     </div>
-
+                    {# This the label for the episode_id of the property #}
                     <div class="label">
                        {{ form_label(productForm.episode_id, 'Episode_id') }}
                     </div>
                     <div class="widget">
                        {{ form_widget(productForm.episode_id) }}
                     </div>
-
+                    {# This the label for the description of the property #}
                     <div class="label">
                         {{ form_label(productForm.description, 'Description') }}
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.description) }}
                     </div>
-
+                    {# This the label for the fabricant of the property #}
                     <div class="label">
                         {{ form_label(productForm.manufacturer, 'Fabricant') }}
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.manufacturer) }}
                     </div>
-
+                    {# This the label for the cote of the property #}
                     <div class="label">
                         {{ form_label(productForm.price, 'Cote €') }}
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.price) }}
                     </div>
-
+                    {# This the label for the categorie of the property #}
                     <div class="label">
                         {{ form_label(productForm.category, 'Catégorie') }}
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.category) }}
                     </div>
-
+                    {# This the label for the image of the property #}
                     <div class="label">
                         {{ form_label(productForm.picture, 'Image') }}
                     </div>
                     <div class="widget">
                         {{ form_widget(productForm.picture) }}
                     </div>
-
+                    {# I use form_end() for the closing tag #}
                     {{ form_end(productForm) }}
-
-                </div>
+           </div>
         </section>
 
 {% endblock main %}

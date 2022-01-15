@@ -11,9 +11,9 @@
                 <div class="card-container">
                     <article>
                         <div class="card-detail">
-                            <a href="{{ path('public_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt=""></a>
+                            <a href="{{ path('public_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt="image du produit"></a>
                                 <div class="like">
-                                    <a href="{{ path('public_wishlist', {"id": productadd.id}) }}"><img src="../public/assets/img/like-black.png"/></a>
+                                    <a href="#"><img src="../public/assets/img/like-black.png"/></a>
                                 </div>
                             <div class="card-content">
                                 <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>

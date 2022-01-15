@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site</title>
+    <title>{% block metatitle %}Swfigurines{% endblock metatitle%}</title>
+    <link rel="icon" href="../public/assets/img/logo.png" type="image/icon type">
     <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/button-top.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/products.css') }}" />
@@ -14,11 +15,11 @@
 <body>
 
 <header>
-    <a href="{{ path('home') }}"><img class="icon-logo" src="../public/assets/img/logo.png" alt=""></a>
+    <a href="{{ path('home') }}"><img class="icon-logo" src="../public/assets/img/logo.png" alt="image du logo swFigurines"></a>
     <div class="main-navbar">
         <div>
-            <img class="icon-wishlist" src="../public/assets/img/symbol-sign-in.png" alt="icon of a medail">
-            <img class="icon-droid" src="../public/assets/img/droid-connexion.png" alt="icon of a droid">
+            <img class="icon-wishlist" src="../public/assets/img/symbol-sign-in.png" alt="icône d'un médaillon">
+            <img class="icon-droid" src="../public/assets/img/droid-connexion.png" alt="icône d'un droid">
         </div>
         <nav>
             <ul class="main-navbar-content">
@@ -35,14 +36,14 @@
 <footer>
     <nav>
         <ul class="footer-legal-notices">
-            <img class="logo-footer" src="../public/assets/img/logo.png">
+            <a href="{{ path('home') }}"><img class="logo-footer" src="../public/assets/img/logo.png" alt="image du logo swFigurines"></a>
             <li><a class="footer-informations" href="#">Mentions légales</a></li>
-            <li><a class="footer-informations" href="#">Contact</a></li>
+            <li><a class="footer-informations" href="{{ path('public_contact') }}">Contact</a></li>
             <li><a class="footer-informations" href="#">Aide</a></li>
         </ul>
     </nav>
     <div>
-        <img onclick="topFunction()" id="btn-top" src="../public/assets/img/top.png" alt="top arrow">
+        <img onclick="topFunction()" id="btn-top" src="../public/assets/img/top.png" alt="flèche montante">
     </div>
 </footer>
 

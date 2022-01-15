@@ -10,12 +10,12 @@
             </div>
         </section>
         <section id="main-part">
-            <div class="search-bar">
-                <input type="text"placeholder="Recherche par personnage, par fabricant, par catégorie"/>
+            <form class="search-bar" action="{{ path('public_search_products') }}">
+                <input type="text" name="q" placeholder="Recherche par personnage, par fabricant, par catégorie"/>
                 <div>
-                    <a class="btn btn-fonction" href="{{ path('public_search_products') }}">Rechercher</a>
+                    <button class="btn btn-fonction" type="submit" href="{{ path('public_search_products') }}">Rechercher</button>
                 </div>
-            </div>
+            </form>
             <div class="sub-menu">
                 <nav>
                     <ul class="sub-menu-list">
@@ -23,6 +23,7 @@
                         <li><a class="element-list" href="{{ path('public_episode_rogueone') }}">Rogue One</a></li>
                         <li><a class="element-list" href="{{ path('public_episode_1') }}">Episode I</a></li>
                         <li><a class="element-list" href="{{ path('public_episode_3') }}">Episode III</a></li>
+                        {# I use "Path" to link the route of the controller with the link of the access path #}
                         <li><a class="element-list" href="{{ path('public_episode_4') }}">Episode IV</a></li>
                     </ul>
                 </nav>

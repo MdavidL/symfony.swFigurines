@@ -11,11 +11,12 @@ class EpisodeController extends AbstractController
     /**
      * @Route ("/episode4", name="public_episode_4")
      */
+    //I create a public function for episode 4, for my Controller.
     public function episode4(ProductaddRepository $productaddRepository)
     {
-
+        // we get back the right products with the ID episode
         $episode4 = $productaddRepository->findBy(['episode_id' => '4']);
-
+        // I create a view in order to display result
         return $this->render('public/episode4.html.twig', ['episode4'=>$episode4]);
     }
 

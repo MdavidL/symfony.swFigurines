@@ -17,7 +17,7 @@ header {
 .main-navbar {
     font-size: 0.8rem;
     font-weight: bold;
-    padding: 1rem 3rem 0 0;
+    padding: 1rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -26,7 +26,7 @@ header {
     position: absolute;
     min-width: 3%;
     height: auto;
-    padding: 1rem 0 0 2rem;
+    padding: 1rem 2rem;
     z-index: 0;
 }
 .icon-wishlist {
@@ -189,19 +189,19 @@ footer div {
     display: none;
 }
 .footer-legal-notices {
-    padding: 0 0 1rem 5rem;
+    padding: 1rem 5rem;
     display: flex;
     align-items: center;
 }
 .logo-footer {
-    width: 25%;
+    width: 70%;
     height: auto;
 }
 .footer-informations {
     color: rgba(57, 60, 65, 1);
     font-size: 0.9rem;
     font-weight: bolder;
-    padding: 0 1rem 0 1rem;
+    padding: 1rem 1rem;
     text-shadow: -0.35px -0.35px 0 transparent, 0.35px 0.35px transparent;
 }
 .footer-informations:hover {
@@ -226,7 +226,7 @@ footer div {
         padding-right: 2rem;
     }
     .footer-legal-notices {
-        padding: 0 0 1rem 7rem;
+        padding: 1rem 7rem;
     }
 }
 @media screen and (max-width: 576px) {
@@ -246,7 +246,8 @@ footer div {
     .navbar-route {
         display: none;
     }
-    .footer-legal-notices {
-        padding: 0 0 1rem 7rem;
+    .footer-informations {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.5rem;
     }
 }
