@@ -6,7 +6,7 @@
     padding-bottom: 4rem;
 }
 #research-list {
-    height: 68vh;
+    min-height: 68vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

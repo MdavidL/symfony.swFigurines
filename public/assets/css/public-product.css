@@ -8,7 +8,6 @@ p {
 }
 #product-elements {
     width: 22rem;
-    padding-left: 5rem;
     line-height: 2;
     display: flex;
     flex-direction: column;

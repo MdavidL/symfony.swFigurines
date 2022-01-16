@@ -323,19 +323,19 @@ footer {
         font-size: 1rem;
         padding-right: 8rem;
     }
+    .main-navbar-content {
+    display: none;
+    }
     .icon-logo {
+        top: 0;
         max-width: 15%;
         height: auto;
     }
     .icon-wishlist {
-        max-width: 10%;
-        height: auto;
-        padding-right: 5.5rem;
+       display: none;
     }
     .icon-droid {
-        max-width: 10%;
-        height: auto;
-        padding-right: 1.5rem;
+        display: none;
     }
     #main-part {
         height: 60vh;
@@ -402,12 +402,6 @@ footer {
     .icon-logo {
         max-width: 25%;
         height: auto;
-    }
-    .icon-wishlist {
-        display: none;
-    }
-    .icon-droid {
-        display: none;
     }
     .navbar-route {
         display: none;

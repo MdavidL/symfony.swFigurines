@@ -1,0 +1,114 @@
+.nav-list {
+    display: none;
+}
+@media screen and (max-width: 992px) {
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+    .nav-list {
+        display: inline;
+    }
+    .burger-menu {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-size: 400% 400%;
+        z-index: 2;
+    }
+    .nav-bar {
+        position: relative;
+        background-color: rgba(4, 95, 159, 1);
+        top: 0;
+        right: 100%;
+        height: 100vh;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: position 2.9s;
+        -webkit-transition: position 2.9s;
+        -moz-transition: position 2.9s;
+        -ms-transition: position 2.9s;
+        -o-transition: position 2.9s;
+    }
+    .toggle {
+        left: 0;
+        box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
+    }
+    .toggle-menu {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2px 2px 2px 3px;
+        border-radius: 5px;
+        cursor: pointer;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    .line {
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        background-color: rgba(4, 95, 159, 1);
+        transition: transform 0.2s ease-out;
+        -webkit-transition: transform 0.2s ease-out;
+        -moz-transition: transform 0.2s ease-out;
+        -ms-transition: transform 0.2s ease-out;
+        -o-transition: transform 0.2s ease-out;
+    }
+    .toggle .line1 {
+        background-color: rgba(229, 26, 41, 0.8);
+        transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
+    }
+    .toggle .line2 {
+        display: none;
+    }
+    .toggle .line3 {
+        background-color: rgba(229, 26, 41, 0.8);
+        transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+    }
+    .nav-list {
+        list-style: none;
+    }
+    .nav-list-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-link {
+        color: rgba(250, 250, 250, 1);
+        font-size: 22px;
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 4px;
+    }
+    .nav-link::before {
+        position: relative;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(250, 250, 250, 1);
+        transform: scaleX(0);
+        transition: transform 0.4s ease-in-out;
+        transform-origin: left;
+        -webkit-transition: transform 0.4s ease-in-out;
+        -moz-transition: transform 0.4s ease-in-out;
+        -ms-transition: transform 0.4s ease-in-out;
+        -o-transition: transform 0.4s ease-in-out;
+    }
+    .nav-link:hover::before {
+        transform: scaleX(1);
+    }
+}
