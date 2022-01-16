@@ -26,12 +26,15 @@ class ProductaddRepository extends ServiceEntityRepository
         // Here are the parameters
         $query = $queryBuilder->select('product')
             ->where('product.name LIKE :word')
+            ->orWhere('product.category LIKE :word')
+            ->orWhere('product.manufacturer LIKE :word')
             ->setParameter('word', '%'.$word.'%')
             ->orderBy('product.name', 'ASC')
             ->getQuery();
         //I call the getResult for the result
         return $query->getResult();
     }
+
 }
     // /**
     //  * @return Productadd[] Returns an array of Productadd objects
