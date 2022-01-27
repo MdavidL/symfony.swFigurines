@@ -11,24 +11,11 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
-
 body {
     background-color: var(--bodyBackgroundColor);
 }
 input {
-    appearance: none;
-    border: none;
     font: inherit;
-    margin: 0;
-    outline: none;
-    padding: 0;
-}
-input[type='submit'] {
-    cursor: pointer;
-}
-.form input[type='pseudo'],
-.form input[type='email'],
-.form input[type='password'] {
     inline-size: 100%;
 }
 /*HEADER*/
@@ -74,7 +61,7 @@ header {
 .user-unknown{
     font-size: 1rem;
     font-weight: bolder;
-    color: red;
+    color: rgba(229, 26, 41, 0.8);
     padding-bottom: 2rem;
 }
 .alert-message {
@@ -98,14 +85,10 @@ header {
     --bodyBackgroundColor: rgba(237, 237, 237, 1);
 }
 :root {
-    --loginBorderRadius: 0.25rem;
     --loginHeaderBackgroundColor: rgba(4, 95, 159, 1);
-    --loginInputBorderRadius: 0.25rem;
 }
 .login__header {
     background-color: var(--loginHeaderBackgroundColor);
-    border-top-left-radius: var(--loginBorderRadius);
-    border-top-right-radius: var(--loginBorderRadius);
     padding: 1.5rem;
     text-align: center;
     text-transform: uppercase;
