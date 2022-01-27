@@ -94,13 +94,11 @@ header {
     text-transform: uppercase;
 }
 .login__title {
-    font-size: 1rem;
     color: rgba(250, 250, 250, 1);
 }
 .login__body {
     background-color: rgba(250, 250, 250, 1);
     padding: 1.5rem;
-    position: relative;
 }
 .login input {
     border: 0.1rem solid rgba(229, 229, 229, 1);
@@ -110,31 +108,14 @@ header {
     background-color: rgba(4, 95, 159, 1);
     border-radius: 50px;
     color: rgba(250, 250, 250, 1);
-    order: 1;
     padding: 0.75rem 1.25rem;
     transition: background-color 0.3s;
 }
 .login input[type='submit']:hover {
     background-color: rgba(229, 26, 41, 0.8);
 }
-#logout-btn {
-    background-color: rgba(229, 26, 41, 0.8);
-    border-radius: 50px;
-    color: rgba(250, 250, 250, 1);
-    order: 1;
-    padding: 0.75rem 1.25rem;
-    transition: background-color 0.3s;
-}
-#logout-btn:hover {
-    background-color: rgba(229, 104, 26, 0.8);
-}
 .login__footer {
-    align-items: center;
     background-color: rgba(250, 250, 250, 1);
-    border-bottom-left-radius: var(--loginBorderRadius);
-    border-bottom-right-radius: var(--loginBorderRadius);
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 1.5em;
     padding-left: 1.5em;
     padding-right: 1.5em;
@@ -163,41 +144,11 @@ footer div {
     font-size: 0.9rem;
     font-weight: bolder;
     padding: 1rem 1rem;
-    text-shadow: -0.35px -0.35px 0 transparent, 0.35px 0.35px transparent;
 }
-.footer-informations:hover {
-    text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
-}
-@media screen and (max-width: 992px) {
-    .icon-logo {
-        max-width: 15%;
-        height: auto;
+    .footer-informations:hover {
+        text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
     }
-    .icon-wishlist {
-        max-width: 10%;
-        height: auto;
-        padding-right: 5.5rem;
-    }
-    .icon-droid {
-        max-width: 10%;
-        height: auto;
-        padding-right: 1.5rem;
-    }
-    .navbar-route {
-        padding-right: 2rem;
-    }
-    .footer-legal-notices {
-        padding: 1rem 7rem;
-    }
-}
 @media screen and (max-width: 576px) {
-    *, body {
-        font-size: 0.8rem;
-    }
-    .icon-logo {
-        max-width: 25%;
-        height: auto;
-    }
     .icon-wishlist {
         display: none;
     }
@@ -206,9 +157,5 @@ footer div {
     }
     .navbar-route {
         display: none;
-    }
-    .footer-informations {
-        font-size: 0.7rem;
-        padding: 0.5rem 0.5rem;
     }
 }

@@ -3,7 +3,6 @@
 {% block main %}
 
 <section id="content">
-
     <div class="alert-message">
     {% if error %}
         <p class="user-unknown">{{ error.messageKey|trans(error.messageData, 'security') }}</p>
