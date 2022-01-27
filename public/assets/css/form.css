@@ -10,11 +10,10 @@ button {
     background-color: rgba(76,175,79, 1);
     border: none;
     color: white;
-    padding: 15px 25px;
+    padding: 1rem 1rem;
     text-align: center;
     border-radius: 100px;
     display: inline-block;
-    font-size: 16px;
     cursor: pointer;
 }
 button:hover{

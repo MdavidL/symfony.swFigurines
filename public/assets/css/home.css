@@ -63,6 +63,9 @@ header {
 .navbar-route:hover {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
 }
+.navbar-route-deconnection {
+    padding-right: 3.5rem;
+}
 /*MAIN*/
 #message {
     display: flex;

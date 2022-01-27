@@ -9,13 +9,11 @@
         <p class="user-unknown">{{ error.messageKey|trans(error.messageData, 'security') }}</p>
     {% endif %}
     </div>
-
     <div class="alert-message">
     {% for message in app.flashes('success') %}
         <p class="alert-success" href="#">{{ message }}</p>
     {% endfor %}
     </div>
-
     <div class="grid">
         <form action="{{ path('login') }}" method="post" class="form login">
             <div class="login__header">
@@ -34,7 +32,6 @@
             </div>
             <div class="login__footer">
                 <input type="submit" value="Login">
-                <input id="logout-btn" type="submit" value="Logout">
             </div>
         </form>
     </div>

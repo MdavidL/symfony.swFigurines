@@ -9,97 +9,9 @@ body {
     color: rgba(57, 60, 65, 1);
     list-style: none;
     text-decoration: none;
-}
-/*HEADER*/
-header {
-    height: 10vh;
-}
-.main-navbar {
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 1rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.icon-logo {
-    position: absolute;
-    min-width: 3%;
-    height: auto;
-    padding: 1rem 2rem;
-    z-index: 0;
-}
-.icon-wishlist {
-    position: relative;
-    padding-right: 6.3rem;
-    z-index: 1;
-}
-.icon-droid {
-    position: relative;
-    padding-right: 5.2rem;
-    z-index: 1;
-}
-.main-navbar-content {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    z-index: 1;
-}
-.navbar-route {
-    padding-right: 4rem;
-    color: rgba(57, 60, 65, 1);
-    text-shadow: -0.35px -0.35px 0 transparent, 0.35px 0.35px transparent;
-}
-.navbar-route:hover {
-    text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
-}
-/*MAIN*/
-#content {
-    height: 81vh;
-    padding-top: 8rem;
-}
-.user-unknown{
-    font-size: 1rem;
-    font-weight: bolder;
-    color: red;
-    padding-bottom: 2rem;
-}
-.alert-message {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-.alert-success {
-    font-size: 1rem;
-    font-weight: bolder;
-    color: rgba(65,166,50,1);
-    padding-bottom: 2rem;
-}
-.align {
-    display: grid;
-    place-items: center;
-}
-:root {
-    --gridMaxWidth: 25%;
-    --gridWidth: 90%;
-}
-.grid {
-    inline-size: var(--gridWidth);
-    margin-inline: auto;
-    max-inline-size: var(--gridMaxWidth);
-}
-:root {
-    --bodyBackgroundColor: rgba(237, 237, 237, 1);
-    --bodyFontSize: 1rem;
-}
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-html {
     box-sizing: border-box;
 }
+
 body {
     background-color: var(--bodyBackgroundColor);
 }
@@ -118,6 +30,72 @@ input[type='submit'] {
 .form input[type='email'],
 .form input[type='password'] {
     inline-size: 100%;
+}
+/*HEADER*/
+header {
+    height: 10vh;
+}
+.main-navbar {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.icon-logo {
+    position: absolute;
+    min-width: 9%;
+    height: auto;
+    padding: 1rem 2rem;
+}
+.icon-wishlist {
+    padding-right: 6.3rem;
+}
+.icon-droid {
+    padding-right: 5.2rem;
+}
+.main-navbar-content {
+    display: flex;
+    flex-direction: row;
+}
+.navbar-route {
+    padding-right: 4rem;
+    color: rgba(57, 60, 65, 1);
+}
+.navbar-route:hover {
+    text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
+}
+/*MAIN*/
+#content {
+    height: 81vh;
+    padding-top: 8rem;
+}
+.user-unknown{
+    font-size: 1rem;
+    font-weight: bolder;
+    color: red;
+    padding-bottom: 2rem;
+}
+.alert-message {
+    text-align: center;
+}
+.alert-success {
+    font-weight: bolder;
+    color: rgba(65,166,50,1);
+    padding-bottom: 2rem;
+}
+:root {
+    --gridMaxWidth: 25%;
+    --gridWidth: 90%;
+}
+.grid {
+    inline-size: var(--gridWidth);
+    margin-inline: auto;
+    max-inline-size: var(--gridMaxWidth);
+}
+:root {
+    --bodyBackgroundColor: rgba(237, 237, 237, 1);
 }
 :root {
     --loginBorderRadius: 0.25rem;
