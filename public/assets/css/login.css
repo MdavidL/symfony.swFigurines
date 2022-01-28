@@ -74,18 +74,12 @@ header {
 }
 :root {
     --gridMaxWidth: 25%;
-    --gridWidth: 90%;
+    --loginHeaderBackgroundColor: rgba(4, 95, 159, 1);
 }
 .grid {
     inline-size: var(--gridWidth);
     margin-inline: auto;
     max-inline-size: var(--gridMaxWidth);
-}
-:root {
-    --bodyBackgroundColor: rgba(237, 237, 237, 1);
-}
-:root {
-    --loginHeaderBackgroundColor: rgba(4, 95, 159, 1);
 }
 .login__header {
     background-color: rgba(4, 95, 159, 1);
@@ -117,10 +111,7 @@ header {
     background-color: rgba(229, 26, 41, 0.8);
 }
 .login__footer {
-    background-color: rgba(250, 250, 250, 1);
-    padding-bottom: 1.5em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding: 0 1.5rem 1.5rem 1.5rem;
 }
 /*FOOTER*/
 footer {
@@ -147,9 +138,9 @@ footer div {
     font-weight: bolder;
     padding: 1rem 1rem;
 }
-    .footer-informations:hover {
-        text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
-    }
+.footer-informations:hover {
+    text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
+}
 @media screen and (max-width: 576px) {
     .icon-wishlist {
         display: none;
