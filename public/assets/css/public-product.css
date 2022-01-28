@@ -6,6 +6,15 @@ h3 {
 p {
     color: rgba(57, 60, 65, 1);
 }
+span, a, #estimate {
+    font-weight: bolder;
+}
+#product {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #product-elements {
     width: 22rem;
     line-height: 2;
@@ -14,31 +23,21 @@ p {
 }
 .btn-back a {
     color: rgba(4, 95, 159, 1);
+    font-size: 0.7rem;
     padding-right: 1rem;
 }
-#product {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#all-figures {
-    font-size: 0.7rem;
-    font-weight: bolder;
-}
-#all-figures:hover {
+.btn-back a:hover {
     color: rgba(229,18,43, 1);
 }
 #estimate {
     color: rgba(229,18,43, 1);
-    font-weight: bolder;
     padding-top: 1rem;
     border-top: 1px solid rgba(57, 60, 65, 1);
 }
 @media screen and (max-width: 992px) {
     h3 {
         font-size: 1.5rem;
-        padding: 2rem 0 1rem 0;
+        padding: 2rem 1rem;
         text-align: center;
     }
     article {
@@ -49,12 +48,16 @@ p {
         max-width: 60%;
         padding-top: 2rem;
     }
+    .btn-back {
+        display: none;
+    }
     #product {
-        text-align: center;
+        text-align: left;
         height: 100vh;
         flex-direction: column;
     }
     #estimate {
         border-top: 0;
+        padding-bottom: 10rem;
     }
 }

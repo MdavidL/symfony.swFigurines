@@ -3,17 +3,19 @@
 {% block main %}
 
     <section id="product">
-        <img src="{{ asset('uploads/cover/'~product.picture) }}" alt="">
+        <img src="{{ asset('uploads/cover/'~product.picture) }}" alt="image de la figurine">
             <article id="product-elements">
                 <div class="btn-back">
-                    <a id="all-figures" href="{{ path('home') }}">ACCUEIL</a>
-                    <a id="all-figures" href="{{ path('products') }}">TOUTES LES FIGURINES</a>
+                    <a href="{{ path('home') }}">ACCUEIL</a>
+                    <a href="{{ path('products') }}">TOUTES LES FIGURINES</a>
                 </div>
                     <h3>{{ product.name }}</h3>
-                    <p><strong>Episode:</strong> {{ product.episode }}</P>
-                    <p><strong>Fabricant:</strong> {{ product.manufacturer }}</p>
-                    <p><strong>Catégorie:</strong> {{ product.category }}</p>
-                    <p><strong>Description:</strong> {{ product.description }}</p>
+                <div>
+                    <p><span>Episode:</span> {{ product.episode }}</P>
+                    <p><span>Fabricant:</span> {{ product.manufacturer }}</p>
+                    <p><span>Catégorie:</span> {{ product.category }}</p>
+                    <p><span>Description:</span> {{ product.description }}</p>
+                </div>
                     <p id="estimate">Cote: {{ product.price }}€</p>
             </article>
     </section>
