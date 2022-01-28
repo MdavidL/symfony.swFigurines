@@ -11,12 +11,12 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
-body {
-    background-color: var(--bodyBackgroundColor);
-}
 input {
     font: inherit;
     inline-size: 100%;
+}
+form {
+    box-shadow: -6px 6px 10px rgba(57, 60, 65, 0.2) ;
 }
 /*HEADER*/
 header {
@@ -88,7 +88,9 @@ header {
     --loginHeaderBackgroundColor: rgba(4, 95, 159, 1);
 }
 .login__header {
-    background-color: var(--loginHeaderBackgroundColor);
+    background-color: rgba(4, 95, 159, 1);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
     padding: 1.5rem;
     text-align: center;
     text-transform: uppercase;
