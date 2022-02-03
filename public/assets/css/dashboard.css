@@ -26,8 +26,6 @@ header {
 .icon-logo {
     position: absolute;
     padding: 3rem 6rem;
-    text-shadow: -0.35px -0.35px 0 transparent, 0.35px 0.35px transparent;
-    z-index: 0;
 }
 .icon-logo:hover {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);

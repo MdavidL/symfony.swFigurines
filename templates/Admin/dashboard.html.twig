@@ -14,11 +14,10 @@
     </div>
 <section id="products">
     {% for productadd  in products %}
-
-            <div class="card-container">
+        <div class="card-container">
                 <article>
                     <div class="card">
-                        <a href="{{ path('admin_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt=""></a>
+                        <a href="{{ path('admin_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt="image du produit"></a>
                         <div class="card-content">
                             <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>
                             <h4>Cote: {{ productadd.price }}€</h4>
@@ -30,7 +29,6 @@
                     </div>
                 </article>
             </div>
-
     {% endfor %}
 </section>
 
