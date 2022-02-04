@@ -34,8 +34,8 @@
         </section>
         <section id="img-figures-part">
             <div>
-                <img class="grogu" src="../public/assets/img/bgd-image-grogu.png" alt="">
-                <img class="figures" src="../public/assets/img/bgd-image-figures.jpeg" alt="">
+                <img class="grogu" src="../public/assets/img/bgd-image-grogu.png" alt="image de Grogu">
+                <img class="figures" src="../public/assets/img/bgd-image-figures.jpeg" alt="image des figurines">
             </div>
         </section>
         <section id="figures-group">
@@ -44,13 +44,13 @@
             </div>
             <section class="figures-cards">
                 {% for productadd in lastFigures %}
-                                <div class="card">
-                                    <a href="{{ path('public_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt=""></a>
-                                    <div class="card-content">
-                                        <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>
-                                        <h4 id="price">Cote: {{ productadd.price }}€</h4>
-                                    </div>
-                                </div>
+                    <div class="card">
+                        <a href="{{ path('public_product', {"id": productadd.id}) }}"><img src="{{ asset('uploads/cover/'~productadd.picture) }}" alt="image des figurines"></a>
+                        <div class="card-content">
+                            <h4>{{ productadd.name }} {{ productadd.manufacturer }}</h4>
+                            <h4 id="price">Cote: {{ productadd.price }}€</h4>
+                        </div>
+                    </div>
                 {% endfor %}
             </section>
             <div>

@@ -20,6 +20,27 @@ h1 {
 h3 {
     font-size: 1.5rem;
 }
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article h3 {
+    color: rgba(57, 60, 65, 1);
+}
+button {
+    border: none;
+    background-color: rgba(4, 95, 159, 1);
+    color: rgba(250, 250, 250, 1);
+    margin-left: 8rem;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgba(229, 26, 41, 0.8);
+}
 /*HEADER*/
 header {
     height: 10vh;
@@ -93,11 +114,9 @@ header {
     border-radius: 50px;
 }
 .btn {
-    color: rgba(250, 250, 250, 1);
     padding: 0.7rem 2rem;
     border-radius: 50px;
     transition-duration: 0.4s;
-    cursor: pointer;
 }
 .btn-fonction {
     background-color: rgba(4, 95, 159, 1);
@@ -115,15 +134,13 @@ header {
     z-index: 1;
 }
 .sub-menu-list {
-
     padding: 1rem 10rem 0 0;
-
 }
 .sub-menu-list li {
+    position: relative;
     text-align: center;
     display: table-cell;
     font-weight: bolder;
-    position: relative;
 }
 .element-list {
     color: rgba(57, 60, 65, 1);
@@ -131,11 +148,10 @@ header {
 }
 .element-list:after {
     position: absolute;
-    background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
     width: 0;
-    height: 0.1vh;
+    height: 0.2vh;
     left: 50%;
     background: rgba(0, 0, 0, 1);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -154,7 +170,6 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 0;
 }
 .figures {
     position: absolute;
@@ -164,7 +179,6 @@ header {
     right: 0;
     display: flex;
     justify-content: flex-end;
-    z-index: 0;
 }
 #figures-group {
     background-color: rgba(237, 237, 237, 1);
@@ -173,6 +187,9 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+#figures-group a{
+    font-weight: normal;
 }
 .figures-cards {
     text-align: center;
@@ -196,14 +213,13 @@ header {
     justify-content: center;
     align-items: center;
 }
-#subscription-newsletter {
+#newsletter-part p, h3 {
     color: rgba(250, 250, 250, 1);
 }
 .newsletter-bgd {
     position: absolute;
     max-width: 100%;
     height: auto;
-    z-index: 0;
 }
 .newsletter-form {
     position: relative;
@@ -211,39 +227,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
-}
-.element-newsletter h3,
-p {
-    color: rgba(250, 250, 250, 1);
-    padding-bottom: 1rem;
-}
-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .newsletter-bar input {
     min-width: 130%;
     height: 2vh;
     margin-right: 5rem;
     padding: 0.5rem 1rem;
-}
-button {
-    border: none;
-    background-color: rgba(4, 95, 159, 1);
-    color: rgba(250, 250, 250, 1);
-    margin-left: 8rem;
-    padding: 0.7rem 2rem;
-    border-radius: 50px;
-    text-align: center;
-    display: inline-block;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-button:hover {
-    background-color: rgba(229, 26, 41, 0.8);
-    color: rgba(250, 250, 250, 1);
 }
 /*FOOTER*/
 footer {
