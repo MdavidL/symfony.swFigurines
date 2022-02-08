@@ -32,13 +32,13 @@
                 </h1>
             </div>
         </section>
-        <section id="img-figures-part">
+        <section>
             <div>
                 <img class="grogu" src="../public/assets/img/bgd-image-grogu.png" alt="image de Grogu">
                 <img class="figures" src="../public/assets/img/bgd-image-figures.jpeg" alt="image des figurines">
             </div>
         </section>
-        <section id="figures-group">
+        <section class="figures-group">
             <div class="element-figures">
                 <p>Les figurines du moment</p>
             </div>
@@ -57,24 +57,23 @@
                 <a class="btn btn-fonction" href="{{ path('products') }}">voir plus</a>
             </div>
         </section>
-        <section id="newsletter-part">
+        <section class="newsletter-part">
             <img class="newsletter-bgd"src="../public/assets/img/newslletter-bg.jpg" alt="picture with some Star Wars figures">
             <div class="newsletter-form">
                 <div class="element-newsletter">
                     <h3>Vous souhaitez être informé</br> des dernières nouveautés ?</h3>
-                    <p id="subscription-newsletter">N'hésitez pas à vous inscrire</p>
+                    <p>N'hésitez pas à vous inscrire</p>
                 </div>
                 <div class="newsletter-bar">
                     <form action="{{ path('newsletter') }}" method="post" class="form">
                         {{ form_start(newsletterForm) }}
-                        <div class="widget">
+                        <div>
                             {{ form_widget(newsletterForm.email) }}
                         </div>
                         {{ form_end(newsletterForm) }}
                     </form>
                 </div>
             </div>
-        </section>
         </section>
     </main>
 {% endblock main%}
