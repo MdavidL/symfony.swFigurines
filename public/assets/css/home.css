@@ -76,14 +76,16 @@ header {
     z-index: 1;
 }
 .navbar-route {
-    padding-right: 4rem;
     color: rgba(57, 60, 65, 1);
+    font-weight: normal;
+    padding-right: 4rem;
     text-shadow: -0.35px -0.35px 0 transparent, 0.35px 0.35px transparent;
 }
 .navbar-route:hover, .navbar-route-deconnection:hover {
     text-shadow: -0.35px -0.35px 0 rgba(57, 60, 65, 1);
 }
 .navbar-route-deconnection {
+    font-weight: normal;
     padding-right: 3.5rem;
 }
 /*MAIN*/
@@ -139,10 +141,10 @@ header {
     position: relative;
     text-align: center;
     display: table-cell;
-    font-weight: bolder;
 }
 .element-list {
     color: rgba(57, 60, 65, 1);
+    font-weight: bolder;
     padding: 1rem 1rem;
 }
 .element-list:after {
@@ -242,8 +244,7 @@ footer {
 }
 .footer-informations {
     color: rgba(57, 60, 65, 1);
-    font-size: 0.9rem;
-    font-weight: bolder;
+    font-weight: normal;
     padding: 1rem 1rem;
 }
 .footer-informations:hover {
